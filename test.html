@@ -1,0 +1,13 @@
+require 'rubygems'
+require 'selenium-webdriver'
+
+ 
+browser = Selenium::WebDriver.for :safari
+browser.get "http://www.opentable.com/bar-tartine"
+ 
+browser.manage.delete_all_cookies
+
+
+
+date = browser.find_element(:link_text, "23")
+
